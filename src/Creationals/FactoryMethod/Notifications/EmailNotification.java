@@ -7,6 +7,7 @@ import Creationals.FactoryMethod.Notifications.Interfaces.Notification;
  * Here, the EmailNotification class has its own implementation of the notifyUser method.
  */
 public class EmailNotification implements Notification {
+
     @Override
     public void notifyUser() {
         System.out.println("Sending an email notification.");

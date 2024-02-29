@@ -9,5 +9,7 @@ package Creationals.FactoryMethod.Notifications.Interfaces;
  * Each notification class will have its own implementation of the notifyUser method !
  */
 public interface Notification {
+
     void notifyUser();
+
 }

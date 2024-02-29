@@ -1,7 +1,6 @@
 package Creationals.FactoryMethod.Notifications.Factory;
 
 import Creationals.FactoryMethod.Notifications.Interfaces.Notification;
-import Creationals.FactoryMethod.Notifications.Interfaces.NotificationFactory;
 import Creationals.FactoryMethod.Notifications.SMSNotification;
 
 /**
@@ -9,7 +8,7 @@ import Creationals.FactoryMethod.Notifications.SMSNotification;
  * product's type.
  * Here, this factoru creates an SMSNotificationFactory.
  */
-public class SMSNotificationFactory implements NotificationFactory {
+public class SMSNotificationFactory  extends NotificationFactory {
     @Override
     public Notification createNotification() {
         return new SMSNotification();
