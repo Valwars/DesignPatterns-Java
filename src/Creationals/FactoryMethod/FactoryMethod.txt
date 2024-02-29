@@ -1,0 +1,31 @@
+
+Qu'est ce que le design pattern Factory Method ?
+
+L'idée principale derrière ce patron est de fournir une interface pour créer des objets dans une super-classe, tout en permettant aux sous-classes d'altérer le type des objets qui seront créés.
+Cela permet de déléguer la responsabilité de l'instanciation des classes à des sous-classes.
+
+
+Voici quelques points clés à propos du design pattern Factory Method :
+
+Le design pattern Factory Method est un patron de conception de création utilisé en programmation orientée objet. L'idée principale derrière ce patron est de fournir une interface pour créer des objets dans une super-classe, tout en permettant aux sous-classes d'altérer le type des objets qui seront créés. Cela permet de déléguer la responsabilité de l'instanciation des classes à des sous-classes. Voici quelques points clés à propos du design pattern Factory Method :
+
+Encapsulation de la création d'objets : Il encapsule la création d'objets en ne nécessitant pas que le code client fasse appel directement au constructeur de la classe. Cela permet une plus grande flexibilité dans le choix des objets à créer.
+
+Sous-classes configurables : Les sous-classes peuvent redéfinir la méthode factory pour retourner une instance d'une autre classe. Cela permet d'étendre ou de modifier les classes d'objets créées sans modifier le code client.
+
+Utilisation : Le Factory Method est particulièrement utile lorsqu'il y a un besoin de gérer, maintenir ou étendre les types d'objets créés par une classe. Il est également utile lorsque les classes concrètes à instancier sont décidées à l'exécution.
+
+Exemple : Imaginons une application de gestion de documents. Le code client pourrait nécessiter différents types de documents (Word, PDF, Excel, etc.), mais il ne sait pas quel type de document il faudra créer à l'exécution. Un design pattern Factory Method permettrait de définir une interface commune pour créer des documents, tandis que les sous-classes concrètes implémenteraient la méthode factory pour créer le bon type de document.
+
+Avantages :
+
+Flexibilité : Les classes client travaillent avec des interfaces ou des classes abstraites. Il est facile d'introduire de nouvelles classes concrètes sans changer le code client.
+Découplage : Le code client est découplé des classes concrètes, favorisant ainsi la faible dépendance et la haute cohésion.
+Inconvénients :
+
+Complexité : Peut introduire une complexité supplémentaire dans le code, car il nécessite la création de plusieurs sous-classes pour implémenter la méthode factory.
+Développement : Peut nécessiter plus de temps de développement pour mettre en place correctement, surtout dans des systèmes complexes.
+
+
+En résumé, le design pattern Factory Method est un outil puissant pour créer des objets, permettant une plus grande flexibilité et un découplage entre le code client et les classes concrètes utilisées.
+
