@@ -1,9 +1,9 @@
-package Structural.Decorator;
+package Structural.Decorator.Notifier;
 
 public abstract class BaseNotifierDecorator implements INotifier{
     private final INotifier wrapped;
 
-    BaseNotifierDecorator(INotifier wrapped) {
+    protected BaseNotifierDecorator(INotifier wrapped) {
         this.wrapped = wrapped;
     }
     public void send(String message) {

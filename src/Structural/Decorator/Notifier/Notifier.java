@@ -1,6 +1,6 @@
-package Structural.Decorator;
+package Structural.Decorator.Notifier;
 
-public class Notifier implements INotifier{
+public class Notifier implements INotifier {
 
     private final String username;
 

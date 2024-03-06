@@ -2,9 +2,10 @@ import Creationals.FactoryMethod.Notifications.Factory.EmailNotificationFactory;
 import Creationals.FactoryMethod.Notifications.Factory.SMSNotificationFactory;
 import Creationals.FactoryMethod.Notifications.Interfaces.Notification;
 import Creationals.FactoryMethod.Notifications.Interfaces.NotificationFactory;
-import Structural.Decorator.*;
-import Structural.Decorator.Decorator.FacebookDecorator;
-import Structural.Decorator.Decorator.WhatsAppDecorator;
+import Structural.Decorator.Notifier.Decorator.FacebookDecorator;
+import Structural.Decorator.Notifier.Decorator.WhatsAppDecorator;
+import Structural.Decorator.Notifier.INotifier;
+import Structural.Decorator.Notifier.Notifier;
 
 public class Main {
     public static void main(String[] args) {

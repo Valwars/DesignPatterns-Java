@@ -1,7 +1,8 @@
-package Structural.Decorator.Decorator;
+package Structural.Decorator.Notifier.Decorator;
 
-import Structural.Decorator.BaseNotifierDecorator;
-import Structural.Decorator.INotifier;
+
+import Structural.Decorator.Notifier.BaseNotifierDecorator;
+import Structural.Decorator.Notifier.INotifier;
 
 public class FacebookDecorator extends BaseNotifierDecorator {
 
