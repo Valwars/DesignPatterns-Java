@@ -7,6 +7,11 @@ import Creationals.FactoryMethod.Notifications.Interfaces.Notification;
  * Here, the SMSNotification class has its own implementation of the notifyUser method.
  */
 public class SMSNotification implements Notification {
+
+    public void sendSMS() {
+        System.out.println("Sending an SMS.");
+
+    }
     @Override
     public void notifyUser() {
         System.out.println("Sending an SMS notification.");

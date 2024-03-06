@@ -2,6 +2,9 @@ import Creationals.FactoryMethod.Notifications.Factory.EmailNotificationFactory;
 import Creationals.FactoryMethod.Notifications.Factory.SMSNotificationFactory;
 import Creationals.FactoryMethod.Notifications.Interfaces.Notification;
 import Creationals.FactoryMethod.Notifications.Interfaces.NotificationFactory;
+import Structural.Decorator.*;
+import Structural.Decorator.Decorator.FacebookDecorator;
+import Structural.Decorator.Decorator.WhatsAppDecorator;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,5 +21,26 @@ public class Main {
         NotificationFactory factory2 =new SMSNotificationFactory();
         Notification notification2 = factory2.createNotification();
         notification2.notifyUser();
+
+
+        System.out.println("**************");
+
+        // Decorator
+
+        INotifier notifier = new Notifier("John");
+        notifier.send("test premier message only mail to Jhon");
+        System.out.println("---");
+
+        INotifier notifierWithDecorator = new FacebookDecorator(notifier);
+        notifierWithDecorator.send("test second message mail and facebook to Jhon");
+        System.out.println("---");
+
+        INotifier notifierWithDecorator2 = new WhatsAppDecorator(notifier);
+        notifierWithDecorator2.send("test second message mail and what's app to Jhon");
+        System.out.println("---");
+
+        INotifier notifierWithDecorator3 = new WhatsAppDecorator(notifierWithDecorator);
+        notifierWithDecorator3.send("test thrid message mail, fb and what's app to Jhon");
+
     }
 }
