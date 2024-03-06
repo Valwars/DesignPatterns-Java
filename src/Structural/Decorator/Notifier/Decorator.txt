@@ -1,0 +1,24 @@
+
+Le design pattern Decorator est un patron de conception structurel utilisé en programmation orientée objet qui permet d'ajouter dynamiquement de nouvelles fonctionnalités à des objets sans modifier leur structure. Il fonctionne en enveloppant les objets dans des objets "décorateurs" qui ajoutent de nouveaux comportements ou responsabilités. Voici quelques points clés à propos du design pattern Decorator :
+
+Extension dynamique des fonctionnalités : Le Decorator permet d'étendre ou de modifier les capacités d'un objet à l'exécution, en lui "attachant" de nouveaux comportements ou fonctionnalités via des objets décorateurs.
+
+Alternative à l'héritage : Plutôt que d'utiliser l'héritage pour étendre les fonctionnalités d'une classe, le Decorator propose une approche plus flexible et moins rigide en composant des objets pour ajouter des comportements.
+
+Utilisation : Ce patron est utile lorsque l'extension des capacités d'une classe par l'héritage mène à une explosion de sous-classes, ou quand les fonctionnalités doivent être ajoutées ou retirées dynamiquement à des objets à l'exécution.
+
+Exemple : Imaginons un système de création de boissons où l'on peut ajouter différents types de condiments (lait, sucre, crème, etc.) à une boisson de base (café, thé). Le design pattern Decorator permet de créer une classe de base pour la boisson et de "décorer" cette boisson avec divers condiments sans créer une classe spécifique pour chaque combinaison possible.
+
+Avantages :
+
+Flexibilité : Permet d'ajouter, retirer ou combiner des fonctionnalités à des objets de manière flexible à l'exécution.
+
+Découplage : Favorise la séparation des responsabilités en permettant d'isoler les extensions ou modifications des fonctionnalités dans des classes décorateurs distinctes.
+
+Inconvénients :
+
+Complexité : Peut rendre le code plus compliqué en introduisant de nombreux petits objets et décorateurs, rendant le système plus difficile à comprendre.
+
+Gestion des décorateurs : Il peut être difficile de gérer ou d'identifier la structure des objets décorés si elle devient trop complexe.
+
+En résumé, le design pattern Decorator offre une méthode souple pour étendre les fonctionnalités des objets, en promouvant le principe de responsabilité unique et en fournissant une alternative à l'extension par héritage, tout en évitant les problèmes liés à une hiérarchie de classes profonde et complexe.
