@@ -1,4 +1,4 @@
-package Structural.Decorator.Notifier.Decorator;
+package Structural.Decorator.Notifier.Decorators;
 
 
 import Structural.Decorator.Notifier.BaseNotifierDecorator;
