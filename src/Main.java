@@ -6,6 +6,12 @@ import Structural.Decorator.Notifier.Decorators.FacebookDecorator;
 import Structural.Decorator.Notifier.Decorators.WhatsAppDecorator;
 import Structural.Decorator.Notifier.INotifier;
 import Structural.Decorator.Notifier.Notifier;
+import Structural.Proxy.Internet.Internet;
+import Structural.Proxy.Internet.ProxyInternet;
+import Structural.Proxy.Internet.RealInternet;
+import Structural.Proxy.Video.ProxyVideoDownloader;
+import Structural.Proxy.Video.RealVideoDownloader;
+import Structural.Proxy.Video.VideoDownloader;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,19 +35,37 @@ public class Main {
         // Decorator
 
         INotifier notifier = new Notifier("John");
-        notifier.send("test premier message only mail to Jhon");
-        System.out.println("---");
+        notifier.send("first message only mail to Jhon");
 
         INotifier notifierWithDecorator = new FacebookDecorator(notifier);
-        notifierWithDecorator.send("test second message mail and facebook to Jhon");
-        System.out.println("---");
+        notifierWithDecorator.send("mail and facebook to Jhon");
 
         INotifier notifierWithDecorator2 = new WhatsAppDecorator(notifier);
-        notifierWithDecorator2.send("test second message mail and what's app to Jhon");
-        System.out.println("---");
+        notifierWithDecorator2.send("mail and what's app to Jhon");
 
         INotifier notifierWithDecorator3 = new WhatsAppDecorator(notifierWithDecorator);
-        notifierWithDecorator3.send("test thrid message mail, fb and what's app to Jhon");
+        notifierWithDecorator3.send("mail, fb and what's app to Jhon");
+        System.out.println("**************");
+
+        // proxy
+        System.out.println("------ without proxy --------");
+
+        Internet internet = new ProxyInternet();
+        internet.connectTo("google.com");
+        internet.connectTo("banned.com");
+
+        VideoDownloader videoDownloader = new RealVideoDownloader();
+        videoDownloader.getVideo("1234");
+        videoDownloader.getVideo("1234");
+        System.out.println("------ with proxy --------");
+
+        // here, even if the video is already downloaded, the server will be called again. S
+        // O use, a proxy caching data.
+
+        VideoDownloader withProxy = new ProxyVideoDownloader();
+        withProxy.getVideo("1234");
+        withProxy.getVideo("1234");
+
 
     }
 }
