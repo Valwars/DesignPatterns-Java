@@ -1,0 +1,39 @@
+Le design pattern Proxy est un modèle de conception structurel qui agit comme un intermédiaire pour contrôler l'accès à un autre objet.
+Son objectif principal est de fournir un substitut ou un placeholder pour un autre objet afin de contrôler l'accès à celui-ci.
+
+Utilité
+Le Proxy est particulièrement utile dans les situations où il est nécessaire de contrôler ou de gérer l'accès à un objet.
+Cela peut inclure le retardement de l'initialisation d'un objet coûteux jusqu'à ce qu'il soit réellement nécessaire, l'accès à un objet situé sur un réseau distant, ou l'ajout de fonctionnalités supplémentaires telles que la mise en cache ou la vérification des droits d'accès lors de l'accès à l'objet.
+
+Fonctionnement
+Le pattern Proxy implique la création d'une classe proxy qui encapsule une référence vers l'objet cible.
+La classe proxy implémente la même interface que l'objet cible, ce qui lui permet de se substituer à l'objet cible aux yeux du client.
+Lorsqu'une méthode de l'interface est appelée sur le proxy, le proxy peut choisir de transmettre l'appel à l'objet cible, de retarder l'appel, de le modifier, ou même de le refuser, selon sa logique interne.
+
+Cas d'utilisations
+Lazy Initialization (Initialisation paresseuse) : Le proxy peut retarder la création et l'initialisation de l'objet coûteux jusqu'à ce qu'il soit réellement nécessaire.
+Contrôle d'accès : Le proxy peut vérifier que le client a les droits nécessaires pour accéder à l'objet.
+Logging et Monitoring : Le proxy peut enregistrer les appels aux méthodes de l'objet pour le monitoring ou le debugging.
+Gestion des ressources distantes : Dans les systèmes distribués, le proxy peut faciliter l'accès aux objets situés sur des serveurs distants.
+
+Pourquoi l'utiliser
+L'utilisation du pattern Proxy est justifiée lorsque vous avez besoin de plus de contrôle ou de fonctionnalités supplémentaires lors de l'accès à un objet.
+Que ce soit pour des raisons de sécurité, de performance ou de facilité de maintenance, le Proxy offre un moyen flexible et puissant de gérer ces préoccupations.
+
+Avantages
+Séparation des préoccupations : Le Proxy permet de séparer le code de gestion de l'accès ou de contrôle de l'objet réel, ce qui peut simplifier le développement et la maintenance.
+Flexibilité : Il offre une grande flexibilité dans la manière dont les appels aux objets sont gérés.
+Amélioration des performances : Dans certains cas, comme la mise en cache ou la lazy initialization, le Proxy peut améliorer les performances de l'application.
+
+Inconvénients
+Complexité supplémentaire : L'introduction d'un Proxy ajoute une couche supplémentaire de complexité dans le design de l'application.
+Surcoût potentiel : Utiliser un Proxy peut introduire un surcoût en termes de performance pour les opérations qui sont redirigées à travers le Proxy.
+Risque de désynchronisation : Si le Proxy n'est pas correctement géré, il peut y avoir un risque de désynchronisation entre le Proxy et l'objet cible.
+En résumé, le design pattern Proxy est un outil puissant dans la boîte à outils d'un développeur, offrant un moyen de contrôler finement l'accès aux objets.
+Cependant, comme pour tout modèle de conception, il doit être utilisé judicieusement, en tenant compte de son impact sur la conception globale de l'application et de ses implications en termes de performance.
+
+
+
+
+
+
