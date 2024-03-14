@@ -1,3 +1,4 @@
+import Behavioral.Memento.Editor;
 import Creationals.FactoryMethod.Notifications.Factory.EmailNotificationFactory;
 import Creationals.FactoryMethod.Notifications.Factory.SMSNotificationFactory;
 import Creationals.FactoryMethod.Notifications.Interfaces.Notification;
@@ -8,7 +9,6 @@ import Structural.Decorator.Notifier.INotifier;
 import Structural.Decorator.Notifier.Notifier;
 import Structural.Proxy.Internet.Internet;
 import Structural.Proxy.Internet.ProxyInternet;
-import Structural.Proxy.Internet.RealInternet;
 import Structural.Proxy.Video.ProxyVideoDownloader;
 import Structural.Proxy.Video.RealVideoDownloader;
 import Structural.Proxy.Video.VideoDownloader;
@@ -65,6 +65,18 @@ public class Main {
         VideoDownloader withProxy = new ProxyVideoDownloader();
         withProxy.getVideo("1234");
         withProxy.getVideo("1234");
+
+        System.out.println("**************");
+
+        // Editor
+        Editor editor = new Editor();
+        editor.write("Like and ");
+        editor.write("Like and Subscribe");
+        System.out.println(editor.getTextArea());
+        editor.write("Like and Subscribe to Geekific!");
+        System.out.println(editor.getTextArea());
+        editor.undo();
+        System.out.println(editor.getTextArea());
 
 
     }
