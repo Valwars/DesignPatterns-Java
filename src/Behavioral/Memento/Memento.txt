@@ -1,0 +1,31 @@
+
+Le design pattern Memento est un patron de conception comportemental utilisé en programmation orientée objet. Il permet de capturer et d'externaliser l'état interne d'un objet à un moment donné, de manière à pouvoir le restaurer dans cet état ultérieurement, sans violer l'encapsulation. Cela est particulièrement utile pour implémenter des fonctionnalités telles que les annulations d'actions ou les points de restauration.
+
+Concept principal
+L'idée principale derrière le design pattern Memento est de fournir un moyen de sauvegarder l'état d'un objet sans exposer ses détails d'implémentation. Le pattern utilise trois acteurs principaux : l'Originator, le Memento et le Caretaker.
+
+Originator : C'est la classe dont l'état doit être sauvegardé et restauré ultérieurement. Elle crée un memento contenant une capture de son état interne.
+Memento : Il stocke l'état interne de l'originator. Le memento protège contre l'accès par des objets autres que l'originator, préservant ainsi l'encapsulation.
+Caretaker : Il est responsable de la sauvegarde et de la restauration des états de l'originator, mais il ne modifie pas ces états directement. Le caretaker détient un ou plusieurs mementos mais ne doit jamais modifier le contenu d'un memento.
+
+Fonctionnement
+L'Originator crée une instance de Memento contenant une copie de son état actuel.
+Le Caretaker demande un memento à l'Originator et le conserve, permettant ainsi de sauvegarder l'état de l'Originator à un moment donné.
+Lorsqu'une restauration de l'état est nécessaire, le Caretaker fournit le Memento stocké à l'Originator.
+L'Originator utilise le Memento pour restaurer son état interne à l'état capturé précédemment.
+
+Utilisation
+Le Memento est utile dans les scénarios où il est nécessaire de revenir à un état antérieur d'un objet, comme :
+
+Les éditeurs de texte ou de code pour implémenter les fonctionnalités d'annulation et de rétablissement.
+Les jeux, pour sauvegarder l'état du jeu et permettre aux joueurs de revenir à un point de sauvegarde antérieur.
+Les applications nécessitant des transactions ou des opérations pouvant être annulées ou restaurées.
+
+Avantages
+Encapsulation : Permet de sauvegarder l'état interne d'un objet sans exposer ses détails d'implémentation.
+Séparation des préoccupations : Le Caretaker se concentre sur le quand et le pourquoi de la sauvegarde de l'état, tandis que l'Originator se concentre sur le comment.
+
+Inconvénients
+Utilisation de la mémoire : La sauvegarde de multiples états peut consommer beaucoup de mémoire.
+Complexité : Peut augmenter la complexité du code, en particulier dans les cas où de nombreux états différents doivent être gérés.
+En résumé, le design pattern Memento offre une solution élégante pour gérer les états antérieurs d'un objet, tout en préservant son encapsulation et en séparant les préoccupations entre les objets impliqués.
