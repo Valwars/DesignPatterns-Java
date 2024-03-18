@@ -1,0 +1,37 @@
+
+Le design pattern Adapter, également connu sous le nom de Wrapper, est un modèle de conception structurel qui permet à
+des interfaces incompatibles de travailler ensemble. Ce pattern agit comme un pont entre deux interfaces incompatibles en convertissant l'interface d'une classe existante en une autre interface attendue par les clients. L'Adapter permet donc à
+des classes avec des interfaces différentes de communiquer sans avoir besoin de modifier leur code source.
+
+Utilité
+L'Adapter est particulièrement utile dans les cas suivants :
+Intégration de systèmes externes : Lorsqu'on utilise des bibliothèques ou des systèmes externes avec des interfaces incompatibles avec le système existant.
+Rétrocompatibilité : Lorsqu'on souhaite utiliser de nouvelles versions de bibliothèques ou de classes sans modifier le code existant qui dépend de ces classes.
+Réutilisation de code : Lorsqu'on souhaite réutiliser des classes existantes qui fonctionnent bien, mais dont les interfaces ne correspondent pas à ce dont on a besoin dans un nouveau contexte.
+
+Fonctionnement
+Le pattern Adapter implique trois éléments clés :
+
+L'Interface Cible : L'interface que le client s'attend à utiliser.
+L'Adapte : La classe existante dont l'interface a besoin d'être adaptée.
+L'Adapter : La classe qui implémente l'interface cible et contient une référence à l'objet de l'adapte. L'adapter traduit les appels de l'interface cible en appels à l'interface de l'adapte.
+
+Il existe deux types d'adapters :
+L'Adapter de Classe : Utilise l'héritage multiple pour adapter une interface à une autre.
+L'Adapter d'Objet : Utilise la composition en contenant l'instance de l'adapte et en redirigeant les appels de l'interface cible vers cette instance.
+
+Cas d'utilisations
+Conversion de données : Pour convertir des données ou des formats de messages entre systèmes ou logiciels incompatibles.
+Interfaces utilisateur : Pour adapter les données à différents types d'interfaces utilisateur sans changer la logique métier sous-jacente.
+APIs de services web : Pour adapter les anciennes interfaces d'API aux nouvelles, permettant ainsi la continuité des services sans interruption.
+
+Avantages
+Flexibilité : Permet d'intégrer des classes qui n'auraient pas pu être utilisées ensemble autrement.
+Réutilisation du code : Favorise la réutilisation de classes existantes même si leurs interfaces ne correspondent pas exactement à ce dont on a besoin.
+Découplage : Permet de décupler le code client de l'interface finale de l'adapte, ce qui améliore la modularité et la maintenance du code.
+
+Inconvénients
+Complexité supplémentaire : Peut ajouter une complexité inutile au code si utilisé dans des situations simples où une refonte des interfaces serait plus appropriée.
+Performance : Peut introduire des retards supplémentaires en raison de l'overhead d'adaptation des interfaces.
+En résumé, le design pattern Adapter est un moyen efficace de faire collaborer des interfaces incompatibles, offrant ainsi une grande flexibilité dans la conception de systèmes complexes.
+Son utilisation doit néanmoins être justifiée par un besoin réel de compatibilité entre les interfaces pour éviter d'introduire une complexité inutile.

@@ -3,6 +3,9 @@ import Creationals.FactoryMethod.Notifications.Factory.EmailNotificationFactory;
 import Creationals.FactoryMethod.Notifications.Factory.SMSNotificationFactory;
 import Creationals.FactoryMethod.Notifications.Interfaces.Notification;
 import Creationals.FactoryMethod.Notifications.Interfaces.NotificationFactory;
+import Structural.Adapter.FancyUIServiceAdapter;
+import Structural.Adapter.IMultiRestoApp;
+import Structural.Adapter.MultiRestoApp;
 import Structural.Decorator.Notifier.Decorators.FacebookDecorator;
 import Structural.Decorator.Notifier.Decorators.WhatsAppDecorator;
 import Structural.Decorator.Notifier.INotifier;
@@ -77,6 +80,17 @@ public class Main {
         System.out.println(editor.getTextArea());
         editor.undo();
         System.out.println(editor.getTextArea());
+
+        System.out.println("**************");
+        System.out.println("Adapter");
+
+        // old UI
+        IMultiRestoApp multiRestoApp = new MultiRestoApp();
+        multiRestoApp.displayMenus("xmlData");
+
+        // nex UI
+        FancyUIServiceAdapter adapter = new FancyUIServiceAdapter();
+        adapter.displayMenus("xmlData");
 
 
     }
