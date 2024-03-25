@@ -1,0 +1,39 @@
+Le design pattern Bridge, ou Pont en français, est un modèle de conception structurel qui vise à séparer l'abstraction (l'interface utilisateur) de son implémentation (la plateforme concrète) de sorte que les deux puissent varier indépendamment.
+Ce modèle est particulièrement utile dans le contexte de systèmes évolutifs, où l'abstraction et l'implémentation peuvent subir des modifications sans impacter l'autre partie. Le Bridge facilite donc la flexibilité et l'indépendance dans la conception des systèmes.
+
+Utilité
+Le design pattern Bridge est particulièrement bénéfique dans les situations suivantes :
+Évolution parallèle : Lorsque vous voulez que votre abstration (comme une interface graphique) et son implémentation (comme un système d'exploitation spécifique) puissent évoluer séparément sans dépendance directe.
+Plateformes multiples : Lorsque vous souhaitez exécuter votre application sur plusieurs plateformes, chacune ayant sa propre implémentation concrète.
+Masquage des implémentations : Quand il est nécessaire de masquer les détails d'implémentation aux utilisateurs de l'abstraction.
+
+
+Fonctionnement
+Le pattern Bridge implique quatre éléments principaux :
+L'Abstraction : Définit l'interface de haut niveau pour les clients. Elle contient une référence à l'objet d'implémentation.
+L'Abstraction Raffinée : Une extension de l'abstraction qui ajoute des fonctionnalités supplémentaires.
+L'Implémenteur : Définit l'interface pour les classes d'implémentation. Cette interface n'a pas besoin d'être identique à l'interface de l'abstraction,
+ mais doit être capable de fournir toutes les opérations nécessaires que l'abstraction utilise.
+L'Implémentation Concrète : Une ou plusieurs implémentations spécifiques de l'interface Implémenteur. Chaque version spécifique
+fournit une implémentation concrète des opérations définies par l'Implémenteur.
+
+
+Cas d'utilisation
+Appareils multi-plateformes : Développement d'une application qui doit fonctionner sur plusieurs types d'appareils ou systèmes d'exploitation,
+chacun nécessitant sa propre implémentation spécifique.
+Systèmes graphiques : Création de systèmes d'interface utilisateur où l'interface peut changer indépendamment
+des systèmes graphiques sous-jacents utilisés pour le rendu.
+Support de multiples bases de données : Applications nécessitant de fonctionner avec différentes bases de données,
+ où chaque type de base de données nécessite une implémentation spécifique.
+
+
+Avantages
+Flexibilité accrue : Permet de séparer l'interface utilisateur de son implémentation, rendant le système plus flexible et facile à étendre.
+Indépendance des plateformes : Facilite l'exécution de l'application sur plusieurs plateformes.
+Simplification du code : Réduit le couplage entre l'abstraction et son implémentation, rendant le code plus facile à maintenir.
+
+
+Inconvénients
+Complexité augmentée : Peut augmenter la complexité de la conception en introduisant plusieurs nouvelles classes et interfaces.
+Apprentissage : Nécessite une compréhension solide du pattern pour être utilisé efficacement.
+En somme, le design pattern Bridge est un moyen puissant de décomposer un système en parties indépendantes, améliorant ainsi sa modularité, son extensibilité, et sa maintenabilité. Il est idéal pour les applications nécessitant une séparation claire entre les abstractions et leurs implémentations, en particulier lorsqu'elles doivent être étendues ou adaptées à différentes plateformes ou environnements.
