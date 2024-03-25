@@ -6,6 +6,9 @@ import Creationals.FactoryMethod.Notifications.Interfaces.NotificationFactory;
 import Structural.Adapter.FancyUIServiceAdapter;
 import Structural.Adapter.IMultiRestoApp;
 import Structural.Adapter.MultiRestoApp;
+import Structural.Bridge.AmericanRestaurant;
+import Structural.Bridge.ItalianRestaurant;
+import Structural.Bridge.Pizza.PepperoniPizza;
 import Structural.Decorator.Notifier.Decorators.FacebookDecorator;
 import Structural.Decorator.Notifier.Decorators.WhatsAppDecorator;
 import Structural.Decorator.Notifier.INotifier;
@@ -92,6 +95,14 @@ public class Main {
         FancyUIServiceAdapter adapter = new FancyUIServiceAdapter();
         adapter.displayMenus("xmlData");
 
+        System.out.println("**************");
+        System.out.println("******* BRIDGE *******");
 
+        // Bridge
+        AmericanRestaurant americanRestaurant = new AmericanRestaurant(new PepperoniPizza());
+        americanRestaurant.deliver();
+
+        ItalianRestaurant italianRestaurant = new ItalianRestaurant(new PepperoniPizza());
+        italianRestaurant.deliver();
     }
 }
