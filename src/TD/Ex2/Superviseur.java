@@ -1,26 +1,27 @@
 package TD.Ex2;
 
+import TD.Ex2.Interfaces.PlateauI;
 import TD.Ex2.Interfaces.SuperviseurActions;
 
 public class Superviseur implements SuperviseurActions {
-    private Plateau plateau;
+    private PlateauI echiquier;
 
-    public Superviseur(Plateau plateau) {
-        this.plateau = plateau;
+    public Superviseur(PlateauI echiquier) {
+        this.echiquier = echiquier;
     }
 
     @Override
     public void initialiser() {
-        plateau.initialiser();
+        echiquier.initialiser();
     }
 
     @Override
     public void extraire() {
-        plateau.extraire();
+        echiquier.extraire();
     }
 
     @Override
     public void disposer() {
-        plateau.disposer();
+        echiquier.disposer();
     }
 }

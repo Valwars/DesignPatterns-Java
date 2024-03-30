@@ -2,7 +2,7 @@ package TD.Ex2;
 
 import TD.Ex2.Interfaces.PlateauI;
 
-public class Plateau implements PlateauI {
+public class Echiquier implements PlateauI {
     @Override
     public void initialiser() {
 
