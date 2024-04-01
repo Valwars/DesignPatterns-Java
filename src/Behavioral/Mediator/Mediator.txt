@@ -1,0 +1,31 @@
+Le design pattern Médiateur, ou Mediator en anglais, est un modèle de conception comportemental qui permet de réduire les dépendances complexes entre les objets en les faisant communiquer indirectement à travers un objet médiateur central. Ce modèle facilite la gestion des interactions entre divers objets dans un système, rendant ces interactions plus faciles à comprendre, à maintenir et à étendre.
+
+Utilité
+
+Le design pattern Médiateur est particulièrement utile dans les situations suivantes :
+
+Réduction du couplage : Lorsqu'il est nécessaire de diminuer les dépendances directes entre les composants d'un système, permettant ainsi une plus grande réutilisabilité et modularité.
+Gestion des communications : Dans les systèmes où plusieurs objets doivent communiquer entre eux de manière complexe et organisée, le médiateur centralise ces communications.
+Complexité des échanges : Pour simplifier les interactions entre de nombreux objets ou systèmes, en évitant la nécessité que chaque objet connaisse les détails des méthodes ou des propriétés des autres.
+Fonctionnement
+
+Le pattern Médiateur implique principalement deux types de participants :
+
+Le Médiateur : Définit une interface pour communiquer avec les objets Colleague. Il centralise la complexité des communications et des dépendances entre les objets.
+Les Colleagues : Sont les objets qui communiquent entre eux à travers le médiateur. Au lieu d'interagir directement, ils utilisent le médiateur pour faciliter la communication et les négociations entre eux.
+Cas d'utilisation
+
+Systèmes de messagerie : Facilite la gestion des messages entre les composants d'une application, comme dans les systèmes de chat ou de messagerie instantanée.
+Interfaces utilisateur complexes : Permet de coordonner les interactions entre divers éléments d'interface utilisateur sans les rendre dépendants les uns des autres.
+Orchestration de services : Dans les architectures de services où différents services doivent interagir de manière contrôlée et flexible.
+Avantages
+
+Centralisation des interactions : Simplifie la gestion des communications entre différents objets ou composants.
+Découplage des composants : Les objets ne communiquent pas directement entre eux, ce qui réduit le couplage et augmente la réutilisabilité.
+Flexibilité accrue : Facilite l'ajout de nouvelles fonctionnalités et la modification des interactions existantes sans impacter significativement le reste du système.
+Inconvénients
+
+Complexité du médiateur : Le médiateur peut devenir un point de complexité et de défaillance unique, surtout si le système s'étend et que le médiateur doit gérer trop de logique d'interaction.
+Performances : La centralisation des communications peut entraîner des retards ou des goulots d'étranglement si le médiateur traite un grand nombre d'interactions simultanément.
+Dépendance au médiateur : Les objets participant au système deviennent dépendants du médiateur, ce qui peut limiter leur réutilisabilité dans d'autres contextes.
+En conclusion, le design pattern Médiateur offre une méthode structurée pour gérer les interactions entre les objets dans un système, en réduisant le couplage et en augmentant la modularité. Bien qu'il puisse introduire une complexité supplémentaire dans le médiateur lui-même, ce pattern facilite grandement la maintenance et l'évolution des systèmes larges et complexes.
