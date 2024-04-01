@@ -1,0 +1,12 @@
+Quel design pattern…
+• définit un objet dont le comportement dépend de l’état ?
+Le dp STATE.
+
+. permet de sauvegarder et de restaurer l’état d’un objet, tout en préservant la confidentialité et
+l’intégrité de cet état ?
+Le dp Memento.
+
+.définit une relation entre des objets telle que lorsqu’un objet change d’état, tous ceux qui en
+dépendent sont informés du changement et/ou mis à jour automatiquement ?
+le dp Observateur (Observer)
+
