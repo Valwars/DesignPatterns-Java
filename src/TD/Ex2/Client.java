@@ -47,6 +47,9 @@ public class Client {
         SuperviseurConcret superviseurConcret = new SuperviseurConcret(echiquierProxy);
         superviseurConcret.superviser();
 
+        // q5) Ici, il faut utiliser un MEMENTO.
+
+
     }
 
 }
